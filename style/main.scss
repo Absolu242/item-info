@@ -1,0 +1,179 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto' , sans-serif;
+    
+}
+
+html{
+    font-size: 10px;
+   
+}
+
+
+$orangeColor:#f37d3a;
+$greenColor:#3af361;
+$greyColor:#7c7c7c;
+$bkgColor:#fff;
+$priceColor:#838383;
+$darkColor:#2e2e2e;
+
+body{
+    background-color: $orangeColor;
+}
+
+.hidden{
+    display: none;
+}
+
+img.active{
+    display: block;
+}
+.card{
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translate(50%,-50%);
+    background-color: $bkgColor;
+
+    
+    &__content{
+        position:relative;
+        display: flex;
+        flex-wrap: wrap;
+
+        &--right{
+            padding: 4rem;
+            position: relative;
+            display: block;
+            
+
+            p{
+                font-size: 1.5rem;
+                padding-bottom: 1rem;
+                color: $greyColor;
+
+                &.type{
+                    font-size: 1.3rem;
+                    letter-spacing: .3rem;
+                    color: $orangeColor;
+                    text-transform: uppercase;
+                }
+            }
+
+            h1{
+                padding-bottom: 2rem;
+            }
+
+            button{
+
+                cursor: pointer;
+                
+                &.color{
+                position: relative;
+                width: 1.4rem;
+                height: 1.4rem;
+                padding: .6rem;
+                border: none;
+                border-radius: 6rem;
+                margin-right: .5rem;
+                outline: none;
+                
+                }
+
+                &.active{
+
+                width: 2px;
+                height: 2px;
+                padding: .5rem;
+
+                }
+
+                &#orange{
+                    background-color: $orangeColor;
+                }
+
+                &#green{
+                    background-color: $greenColor;
+                }
+
+                &#grey{
+                 background-color:$greyColor; 
+                }
+                
+            }
+        }
+
+        div.price{
+
+            display: flex;
+            padding: 20%  0 0 20%  ;
+            left: 10%;
+            justify-content: space-between;
+
+            p{
+                position: relative;
+                font-size: 2rem;
+                top: .5rem;
+            }
+            button{
+                
+                padding: .5rem 3.5rem;
+                border: none;
+                border-radius: 2rem;
+                font-weight: 400;
+                color: #fff;
+                background-color: $orangeColor;
+                cursor: pointer;
+
+            }
+        }
+    }
+
+}
+
+
+@media  (max-width:735px){
+
+    .card{
+     position: absolute;
+    left: 16%;
+    top: 1%;
+    transform: translate(-10%,10%);
+     text-align: center;
+
+     
+     &__content--right{
+        left: 1%;
+
+        button{
+
+            margin-top:2rem ;
+        }
+        div.price{
+
+            display: block;
+            padding: 15%  0 0 0%  ;
+            
+
+            p{
+               margin-bottom: .5rem;
+            }
+            button{
+                
+                padding: .5rem 3.5rem;
+                border: none;
+                border-radius: 2rem;
+                font-weight: 400;
+                color: #fff;
+                background-color: $orangeColor;
+                cursor: pointer;
+
+            }
+        }
+     }
+    }
+ 
+   
+}
